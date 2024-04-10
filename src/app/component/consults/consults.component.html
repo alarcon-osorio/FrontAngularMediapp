@@ -1,0 +1,30 @@
+<p>Consultas</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Paciente</th>
+            <th>DNI</th>
+            <th>Medico</th>
+            <th>Especialidad</th>
+            <th>#. Consulta</th>
+            <th>Fecha Consulta</th>
+            <th>Detalles</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(consult of consults; track consult.idConsult){
+            <tr>
+                <td>{{ consult.idConsult }}</td>
+                <td>{{ consult.patient.firstName + ' ' +  consult.patient.lastName }}</td>
+                <td>{{ consult.patient.dni }}</td>
+                <td>{{ consult.medic }}</td>
+                <td>{{ consult.specialty }}</td>
+                <td>{{ consult.numConsult }}</td>
+                <td>{{ consult.consultDate }}</td>
+                <td>{{ consult.details }}</td>
+            </tr>
+        }
+    </tbody>
+</table>
